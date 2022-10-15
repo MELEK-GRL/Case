@@ -1,0 +1,178 @@
+@import "../styles/basic/variables";
+@import "../styles/basic/mixin.scss";
+body {
+    background-color: $home !important ;
+   @include body();
+}
+.list-container {
+    width: 100%;
+    @include center();
+    display: flex;
+
+    .info-list {
+        display: flex;
+        @include center();
+        flex-direction: column;
+        gap: 1em;
+        width: 80%;
+    }
+}
+.container-header {
+    @include flexBox();
+    background-color: $Intro;
+    header {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        height: 68px;
+        width: 95%;
+        justify-content: space-between;
+        h2 {
+            font-size: 20px;
+            font-weight: 500;
+            color: $blacks;
+            padding: 0;
+            margin: 0;
+            span {
+                font-weight: bold;
+                font-size: 23px;
+            }
+        }
+        div {
+            display: flex;
+            background-color: $blacks;
+            @include radius(99px);
+            padding: 10px 15px;
+            gap: 2px;
+            .header_write {
+                font-weight: 500;
+                color: $white;
+            }
+            .header_point {
+                font-weight: 800;
+                color: $white;
+            }
+        }
+    }
+}
+/*List*/
+.listes {
+    display: flex;
+    width: 100%;
+    cursor: pointer;
+    .list-item {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        height: 620px;
+        overflow:auto;
+        &::-webkit-scrollbar {
+            background-color: rgb(241, 228, 228);
+            @include radius(10px);
+            width:2%;
+            height: 0px;
+        }
+        &::-webkit-scrollbar-thumb {
+            background: $Intro;
+            @include radius(10px);
+        }
+        span {
+            font-weight: 700;
+            font-size: 16px;
+            color: $blacks;
+        }
+        ul {
+            padding: 0px;
+            @include flexBox();
+            gap: 10px;
+            width: 100%;
+            .link-list {
+                padding: 0px;
+                @include flexBox();
+                gap: 10px;
+                text-decoration: none;
+                width: 98%;
+                .list-info {
+                    @include flexBox();
+                    flex-direction: row !important;
+                    justify-content: space-between;
+                    gap: 10px;
+                    @include radius(10px);
+                    background-color: $whiteColor;
+                    box-shadow: rgba(0, 0, 0, 0.05);
+                   padding: 10px;
+                    .list-color {
+                        @include radius(50%);
+                        width: 36px;
+                        height: 36px;
+                        .list_img {
+                            object-fit: cover;
+                            width: 36px;
+                            height: 36px;
+                        }
+                    }
+                    .list-write {
+                        @include flexBox();
+                        gap: 5px;
+                        justify-content: left !important;
+                        align-items: flex-start !important;
+                        @include text();
+                        .list_blacks {
+                            color: $blacks;
+                            font-weight: 700;
+                            font-size: 14px;
+                        }
+                        .list_grays {
+                            font-size: 12px;
+                            font-weight: 500;
+                            color: $grays;
+                        }
+                    }
+                    .list-point {
+                        width: 7%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: right;
+                        span {
+                            color: $green;
+                            font-size: 14px;
+                            font-weight: bold;
+                            @include text();
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.add{
+    gap: 0px !important;
+}
+.border-item{
+   border: 1px solid  #F5F5F5 !important;
+   border-radius: 0px !important;
+}
+@media (max-width: 768px) {
+    .info-list {
+        width: 95% !important;
+    }
+    .list-point {
+        width: 20% !important;
+    }
+}
+@media (max-width: 500px) {
+   .list-info{
+    padding: 3px !important;
+   }
+    .list-container {
+            width: 100% !important;
+        }
+        .info-list {
+            width: 100% !important;
+        }
+}
+
+
+
+

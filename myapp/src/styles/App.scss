@@ -1,0 +1,126 @@
+@import "../styles/basic/variables";
+@import "../styles/basic/mixin.scss";
+body {
+    background-color: $Intro ;
+    @include body();
+}
+.all-container {
+    width: 100%;
+    display: flex;
+    @include center();
+    background-color: $Intro;
+    .info-container {
+        display: flex;
+        @include center();
+        flex-direction: column;
+        justify-content: space-around !important;
+        gap: 1em;
+        height: 720px;
+        width: 80%;
+    }
+}
+.container-navbar {
+    @include flexBox();
+    margin-top: 1em;
+    nav {
+        @include flexBox();
+        gap: 5px;
+        height: 68px;
+        width: 100%;
+        h2 {
+            color: $blacks;
+            font-family: "Montserrat";
+            font-style: normal;
+            font-weight: 700;
+            font-size: 32px;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+        span {
+            color: $blacks;
+            font-family: "Montserrat";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            text-align: center;
+        }
+    }
+}
+//****
+.container-cards {
+    @include flexBox();
+    div {
+        width: 300px;
+        height: 272px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+}
+@media (max-width: 500px) {
+    .container-cards {
+        @include flexBox();
+        div {
+            width: 100% !important;
+            @include flexBox();
+
+            img {
+                width: 95%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+}
+/***/
+.start-container {
+    @include flexBox();
+    gap: 20px;
+    background-color: $white;
+    @include radius(16px);
+    justify-content: space-around;
+    width: 50%;
+    padding: 16px 0px;
+    align-items: center;
+    h3 {
+        font-size: 20px;
+        color: $blacks;
+        font-weight: bold;
+        vertical-align: top;
+        margin: 0;
+        text-align: center;
+    }
+    span {
+        color: $blacks;
+        font-size: 14px;
+        font-style: medium;
+        vertical-align: top;
+        text-align: center;
+    }
+    .link-start {
+        @include links();
+    }
+}
+@media (max-width: 768px) {
+    .start-container {
+        width: 80% !important;
+    }
+}
+@media (max-width: 500px) {
+    .start-container {
+        a {
+            width: 80% !important;
+        }
+    }
+    .all-container {
+        .info-container {
+            width: 100%;
+        }
+    }
+    .start-container {
+        width: 95% !important;
+    }
+}

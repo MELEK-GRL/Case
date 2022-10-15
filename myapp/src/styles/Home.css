@@ -1,0 +1,210 @@
+body {
+  background-color: #f5f5f5 !important;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  height: 720px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.list-container {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.list-container .info-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1em;
+  width: 80%;
+}
+
+.container-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: #ffcc33;
+}
+.container-header header {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  height: 68px;
+  width: 95%;
+  justify-content: space-between;
+}
+.container-header header h2 {
+  font-size: 20px;
+  font-weight: 500;
+  color: #000000;
+  padding: 0;
+  margin: 0;
+}
+.container-header header h2 span {
+  font-weight: bold;
+  font-size: 23px;
+}
+.container-header header div {
+  display: flex;
+  background-color: #000000;
+  border-radius: 99px;
+  padding: 10px 15px;
+  gap: 2px;
+}
+.container-header header div .header_write {
+  font-weight: 500;
+  color: #ffffff;
+}
+.container-header header div .header_point {
+  font-weight: 800;
+  color: #ffffff;
+}
+
+/*List*/
+.listes {
+  display: flex;
+  width: 100%;
+  cursor: pointer;
+}
+.listes .list-item {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  height: 620px;
+  overflow: auto;
+}
+.listes .list-item::-webkit-scrollbar {
+  background-color: rgb(241, 228, 228);
+  border-radius: 10px;
+  width: 2%;
+  height: 0px;
+}
+.listes .list-item::-webkit-scrollbar-thumb {
+  background: #ffcc33;
+  border-radius: 10px;
+}
+.listes .list-item span {
+  font-weight: 700;
+  font-size: 16px;
+  color: #000000;
+}
+.listes .list-item ul {
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 10px;
+  width: 100%;
+}
+.listes .list-item ul .link-list {
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 10px;
+  text-decoration: none;
+  width: 98%;
+}
+.listes .list-item ul .link-list .list-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-direction: row !important;
+  justify-content: space-between;
+  gap: 10px;
+  border-radius: 10px;
+  background-color: #FFFFFF;
+  box-shadow: rgba(0, 0, 0, 0.05);
+  padding: 10px;
+}
+.listes .list-item ul .link-list .list-info .list-color {
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+}
+.listes .list-item ul .link-list .list-info .list-color .list_img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 36px;
+  height: 36px;
+}
+.listes .list-item ul .link-list .list-info .list-write {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 5px;
+  justify-content: left !important;
+  align-items: flex-start !important;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.listes .list-item ul .link-list .list-info .list-write .list_blacks {
+  color: #000000;
+  font-weight: 700;
+  font-size: 14px;
+}
+.listes .list-item ul .link-list .list-info .list-write .list_grays {
+  font-size: 12px;
+  font-weight: 500;
+  color: #999999;
+}
+.listes .list-item ul .link-list .list-info .list-point {
+  width: 7%;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+.listes .list-item ul .link-list .list-info .list-point span {
+  color: #00cc00;
+  font-size: 14px;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.add {
+  gap: 0px !important;
+}
+
+.border-item {
+  border: 1px solid #F5F5F5 !important;
+  border-radius: 0px !important;
+}
+
+@media (max-width: 768px) {
+  .info-list {
+    width: 95% !important;
+  }
+  .list-point {
+    width: 20% !important;
+  }
+}
+@media (max-width: 500px) {
+  .list-info {
+    padding: 3px !important;
+  }
+  .list-container {
+    width: 100% !important;
+  }
+  .info-list {
+    width: 100% !important;
+  }
+}/*# sourceMappingURL=Home.css.map */

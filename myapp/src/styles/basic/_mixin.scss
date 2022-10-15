@@ -1,0 +1,63 @@
+
+@import "../basic/variables";
+
+@mixin body {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    height: 720px;
+    overflow: hidden;
+    width: 100%;
+}
+
+@mixin flexBoxes {
+    display: flex;
+    width: 100%;
+}
+@mixin flexBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+@mixin text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+@mixin box {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+@mixin radius($radius) {
+    border-radius: $radius;
+}
+@mixin center() {
+   align-items: center;
+   justify-content: center;
+}
+@mixin links() {
+    background-color: $blacks;
+    width: 90%;
+    height: 56px;
+  border-radius: 99px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: $white;
+    border: 2px solid $blacks;
+    cursor: pointer;
+    &:hover {
+        background-color: $white;
+        color: $blacks;
+        border: 2px solid $blacks;
+        font-weight: bold;
+        transition: all 5ms;
+    }
+
+ }
